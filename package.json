@@ -1,6 +1,6 @@
 {
-  "name": "betterpanel",
-  "version": "0.1.0",
+  "name": "enzonet-client-area",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@babel/parser": "^7.14.7",
