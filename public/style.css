@@ -1,0 +1,19 @@
+.dark-background {
+    background-color: #212121;
+    color: white;
+}
+.dark-card {
+    background-color: #1F2937 !important;
+}
+.text-white {
+    color: white !important;
+}
+.ass {
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}

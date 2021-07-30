@@ -1,15 +1,21 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
+import LoginContainer from './components/auth/LoginContainer';
+import { createTheme, ThemeProvider } from '@material-ui/core';
 import { checkAuth } from './Modules/auth'
 function App() {
-
+  const darkTheme = createTheme({
+    palette: {
+      type: 'dark',
+    },
+  });
   return (
     <Router>
+      <ThemeProvider theme={darkTheme}>
       <Switch>
-        <Route exact path="/">
-          {checkAuth() ? <DashboardContainer /> : <Redirect to="/login" />}
+        <Route exact path="/auth/login">
+          <LoginContainer />
         </Route>
-        <Route exact path="/server/:uuid">
+        {/* <Route exact path="/server/:uuid">
           {checkAuth() ? <ServerContainer /> : <Redirect to="/login" />}
         </Route>
         <Route exact path="/new/server/:uuid">
@@ -26,9 +32,11 @@ function App() {
         <Route exact path="/sidebar" exact component={() => <SideBar />} />
 
 
-        <Route path="*" component={NotFound} />
+        <Route path="*" component={NotFound} /> */}
 
       </Switch>
+      </ThemeProvider>
+      
     </Router>
   );
 }
